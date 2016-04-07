@@ -4,13 +4,26 @@ body {
 }
 
 
-/*==========================*/
-/*HEADER*/
+#binary-container {
 
+}
 
-/*==========================*/
-/*PROJECTS*/
+#root {
 
+}
 
-/*==========================*/
-/*ABOUT ME*/
+#first-layer-container, .active {
+
+}
+
+#second-layer-container, .active {
+
+}
+
+#third-layer-container, .active {
+
+}
+
+#fourth-layer-container, .active {
+
+}
