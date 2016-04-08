@@ -9,7 +9,6 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   color: #e4d9e5;
   background-image: url('https://images2.alphacoders.com/480/480530.png');
-  text-align: center;
 }
 
 
@@ -18,49 +17,130 @@ body {
   border: 1px solid red;
   background-color: #000000;
   opacity: .9;
-  margin-top: 30%;
+  margin-top: 20%;
+  transform-origin: 50% 100%;
+  transform: perspective(600px) rotateX(28deg);
+  text-align: center;
 }
 
-#root {
- border: 1px solid red;
- margin: 0 auto;
-}
+
 
 h1 {
+ text-align: center;
  margin: 0 auto;
  border: 1px solid red;
  font-size: 1.5em;
- width: 15%;
+ width: 30%;
  padding: .75em;
 }
+
+
+/*============================================*/
+/*FIRST LAYER*/
 
 #first-layer-container, .active {
   border: 1px solid red;
   height: 20%; width: 100%;
 }
 
+#first-layer-container > ul > li {
+  display: inline-block;
+  height: 10%; width: 12%;
+  margin: 2em;
+  padding: .75em;
+}
+
+/*============================================*/
+/*SECOND LAYER*/
+
 #second-layer-container, .active {
   border: 1px solid red;
   height: 20%; width: 100%;
 }
+
+#second-layer-container > ul > li {
+  display: inline-block;
+  margin: 1em;
+  padding: .5em;
+}
+
+
+#second-layer-container > ul > li:nth-child(2) {
+  margin-right: 4.5em;
+}
+
+/*============================================*/
+/*THIRD LAYER*/
 
 #third-layer-container, .active {
   border: 1px solid red;
   height: 20%; width: 100%;
 }
 
+#third-layer-container > ul {
+  margin-left: -36%;
+}
+
+#third-layer-container > ul > li {
+  display: inline-block;
+  margin: 1em;
+  padding: .5em;
+}
+
+#third-layer-container > ul > li:nth-child(2) {
+  margin-right: 3.5em;
+}
+
+/*============================================*/
+/*FOURTH LAYER*/
 #fourth-layer-container, .active {
   border: 1px solid red;
   height: 20%; width: 100%;
 }
 
-li {
-  border: 1px solid red;
-  height: 10%; width: 10%;
+#fourth-layer-container > ul > li {
   display: inline-block;
+  margin: 1em;
+  padding: .5em;
 }
 
-info-box {
+/*============================================*/
+/*DIAGONAL LINES*/
+
+
+.left-diagonal {
+    width: 10%; height: 0px;
+    border-bottom: 1px solid red;
+    -webkit-transform:
+        translateY(25px)
+        translateX(193px)
+        rotate(-62deg);
+}
+
+.right-diagonal {
+    width: 10%; height: 0px;
+    border-bottom: 1px solid red;
+    -webkit-transform:
+        translateY(25px)
+        translateX(300px)
+        rotate(-118deg);
+
+}
+
+/*============================================*/
+
+li {
+  border: 1px solid red;
+  border-radius: 15px;
+  list-style: none;
+}
+
+
+li:hover {
+  color: #e4d9e5;
+}
+
+.info-box {
   margin: 0 auto;
   height: 30%; width: 20%;
   border-radius: 12px;
