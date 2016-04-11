@@ -76,6 +76,9 @@ a:hover {
     color: #e4d9e5;
     text-align: center;
     background-color: #000000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     opacity: .9;
 }
 
@@ -103,27 +106,20 @@ p {
 
 #enigmatic {
   background-image: url('../media/enigmatic.png');
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 
 #medtrakr {
   background-image: url('../media/medtrakr.png');
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 
 
 #connectfour {
   background-image: url('../media/connectfour.png');
-  background-size: 100%;
-  background-repeat: no-repeat;
+
 }
 
 #space {
   background-image: url('../media/planets.png');
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 
 
@@ -136,3 +132,10 @@ p {
 #cube .bottom { transform: rotateX( -90deg ) translateZ( 100px ); }
 
 
+
+p {
+  border: 1px solid red;
+  height: 4em; width: 45%;
+  margin: 0 auto;
+  margin-top: 20%;
+}
