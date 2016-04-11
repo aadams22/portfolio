@@ -6,48 +6,41 @@
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./styles/main.css" media="screen" title="no title" charset="utf-8">
     </script>
+    <script type="text/javascript" src="./js/scripts.js"></script>
   </head>
   <body>
 
-    <div id="binary-container">
-      <div id="reverse-binary-container">
-          <h1>Ashleigh Adams</h1>
+   <header>
+    <h1>Ashleigh Adams</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+   </header>
 
-        <div id="first-layer-container" class="active">
-<!--           <div class="left-diagonal"></div>
-          <div class="right-diagonal"></div>
- -->          <ul>
-            <li id="projects">0</li>
-            <li id="about-me">1</li>
-          </ul>
-        </div>
 
-        <div id="second-layer-container" class="active">
-          <ul>
-            <li id="nothing">0</li>
-            <li id="nothing">1</li>
-            <li id="tech">0</li>
-            <li id="contact">1</li>
-          </ul>
-        </div>
+    <div class="cube-container">
+      
+      <div id="cube">
 
-        <div id="third-layer-container" class="active">
-          <ul>
-            <li id="enigmatic">0</li>
-            <li id="oli-and-olive">1</li>
-            <li id="sad-space">0</li>
-            <li id="connect-four">1</li>
+          <figure class="front" id="about">
+            <h2>About</h2>
+          </figure>
 
-          </ul>
-        </div>
+          <figure class="back" id="contact">
+            <h2>Contact</h2>
+            <p>email: ashleigh.adams22@gmail.com</p>
+          </figure>
 
-        <div id="fourth-layer-container" class="active">
-          <ul>
-            <li id="medtrakr">0</li>
-          </ul>
-        </div>
-</div>
+          <figure class="right" id="enigmatic">Enigmatic</figure>
+          <figure class="left" id="medtrakr">MedTrakr</figure>
+          <figure class="top" id="connectfour">Connect Four</figure>
+          <figure class="bottom" id="space">Space</figure>
+
+      </div>
+
     </div>
+
 
   </body>
 </html>

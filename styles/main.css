@@ -11,152 +11,128 @@ body {
   background-image: url('https://images2.alphacoders.com/480/480530.png');
 }
 
-
-#binary-container {
-  height: 100%; width: 100%;
-/*  border: 1px solid red;*/
-  background-color: #000000;
-  opacity: .9;
-  transform-origin: 50% 100%;
-  transform: perspective(600px) rotateX(36deg);
-  text-align: center;
+header {
+  width: 100%; height: 2em;
 }
 
 
-#reverse-binary-container {
- transform: perspective(600px) rotateX(-18deg);
-}
-
-
-h1 {
- text-align: center;
- margin: 0 auto;
- border: 1px solid red;
- font-size: 2.5em;
- width: 59%;
- padding: .75em;
-}
-
-
-
-/*============================================*/
-/*FIRST LAYER*/
-
-#first-layer-container, .active {
-/*  border: 1px solid red;*/
-  height: 20%; width: 100%;
-}
-
-#first-layer-container > ul > li {
-  display: inline-block;
-  margin: 2em;
-}
-
-/*============================================*/
-/*SECOND LAYER*/
-
-#second-layer-container, .active {
-/*  border: 1px solid red;*/
-  height: 20%; width: 100%;
-}
-
-#second-layer-container > ul {
-  margin-left: -30%;
-}
-
-#second-layer-container > ul > li {
-  display: inline-block;
-  margin: .75em;
-}
-
-
-#second-layer-container > ul > li:nth-child(2) {
-  margin-right: 4.5em;
-}
-
-/*============================================*/
-/*THIRD LAYER*/
-
-#third-layer-container, .active {
-/*  border: 1px solid red;*/
-  height: 20%; width: 100%;
-}
-
-#third-layer-container > ul {
-  margin-left: -30%;
-}
-
-#third-layer-container > ul > li {
-  display: inline-block;
-  margin: 1em;
-}
-
-#third-layer-container > ul > li:nth-child(2) {
-  margin-right: 3em;
-}
-
-/*============================================*/
-/*FOURTH LAYER*/
-#fourth-layer-container, .active {
- /* border: 1px solid red;*/
-  height: 20%; width: 100%;
-}
-
-
-#fourth-layer-container > ul {
-  margin-left: -87%;
-}
-
-#fourth-layer-container > ul > li {
-  display: inline-block;
-  margin: 1em;
-}
-
-/*============================================*/
-/*DIAGONAL LINES*/
-
-
-.left-diagonal {
-    width: 10%; height: 0px;
-    border-bottom: 1px solid red;
-    -webkit-transform:
-        translateY(25px)
-        translateX(193px)
-        rotate(-62deg);
-}
-
-.right-diagonal {
-    width: 10%; height: 0px;
-    border-bottom: 1px solid red;
-    -webkit-transform:
-        translateY(25px)
-        translateX(300px)
-        rotate(-118deg);
-
-}
-
-/*============================================*/
-
-
-ul {
-  transform: perspective(600px) rotateX(-18deg);
-}
 
 li {
-  border: 1px solid red;
-  border-radius: 15px;
+  display: inline-block;
   list-style: none;
-  padding: 2em;
+  padding: 0 1em;
 }
 
 
-li:hover {
-  background-color: #e4d9e5;
+li:first-child {
+  border-right: 1px solid #e4d9e5; 
 }
 
-.info-box {
-  margin: 0 auto;
-  height: 30%; width: 20%;
-  border-radius: 12px;
-  border: 2px solid red;
+
+a {
+  text-decoration: none;
+  color: #e4d9e5;
 }
+
+a:hover {
+  color: #3BB0A7;
+}
+
+/*===================================*/
+/*CUBE*/
+
+
+.cube-container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 0 auto 40px;
+    text-align: center;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -o-perspective: 1000px;
+    perspective: 1000px;
+}
+
+#cube {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 2s;
+}
+
+#cube figure {
+    display: block;
+    position: absolute; 
+    height: 100%; width: 100%;
+    border: 2px solid red;
+    color: #e4d9e5;
+    text-align: center;
+    background-color: #000000;
+    opacity: .9;
+}
+
+#cube.panels-backface-invisible figure {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1em;
+}
+
+
+#about {
+  background-color: #000000;
+  opacity: .7;
+}
+
+
+#enigmatic {
+  background-image: url('../media/enigmatic.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#medtrakr {
+  background-image: url('../media/medtrakr.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+
+#connectfour {
+  background-image: url('../media/connectfour.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#space {
+  background-image: url('../media/planets.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+
+
+#cube .front  { transform: rotateY(   0deg ) translateZ( 100px ); }
+#cube .back   { transform: rotateX( 180deg ) translateZ( 100px ); }
+#cube .right  { transform: rotateY(  90deg ) translateZ( 100px ); }
+#cube .left   { transform: rotateY( -90deg ) translateZ( 100px ); }
+#cube .top    { transform: rotateX(  90deg ) translateZ( 100px ); }
+#cube .bottom { transform: rotateX( -90deg ) translateZ( 100px ); }
+
+
