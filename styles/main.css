@@ -5,7 +5,7 @@
 
 
 html  {
-  height: 100%;
+  height: 2000px;
 }
 
 body {
@@ -18,19 +18,22 @@ body {
   background-image: url('https://images2.alphacoders.com/480/480530.png');
 }
 
+/*===================================
+/*HEADER/NAV*/
 
 
 h1 {
+  width: 100%;
+  text-align: center;
   display: inline-block;
-  padding-left: .5em;
   font-size: 3em;
   opacity: .2;
   margin-bottom: 1%;
 }
 
 ul {
-  margin: 0;
-  padding-left: .75em;
+  text-align: center;
+  margin-left: 10%;
   display: inline-block;
 }
 
@@ -47,32 +50,21 @@ li:last-child {
   font-family: github;
 }
 
+/*===================================
+/*LINKS*/
 
 a {
   text-decoration: none;
   color: white;
-
-
 }
 
 a:hover {
-  color: #3BB0A7;
+  color: #09222C;
 }
-
-
-footer {
-/*  position: fixed;*/
-  margin-bottom: 0;
-  height: 3em; width: 100%;
-  opacity: .2;
-  background-color: #2BA9DA;
-
-}
-
 
 
 /*===================================
-/*CUBE*/
+/*CUBE STRUCTURE*/
 
 
 .cube-container {
@@ -123,12 +115,15 @@ footer {
     backface-visibility: hidden;
 }
 
+/*========================================*/
+/*CUBE IMAGES AND INNER TEXT*/
+
 h2 {
   font-size: 2em;
 }
 
-#enigmatic {
-  background-image: url('../media/enigmatic.png');
+#enigmatic { 
+  background-image: url('../media/enigmatic.png'); 
 }
 
 #medtrakr {
@@ -146,6 +141,8 @@ h2 {
 }
 
 
+/*========================================*/
+/*CUBE ROTATIONS*/
 
 #cube .front  { transform: rotateY(   0deg ) translateZ( 100px ); }
 #cube .back   { transform: rotateX( 180deg ) translateZ( 100px ); }
@@ -164,14 +161,91 @@ p {
 }
 
 
+/*========================================*/
+/*INFO BOX*/
+
+#info-box {
+  margin: 34% auto;
+  width: 60%;
+  border: 1px solid white;
+}
+
+
+/*========================================*/
+/*ABOUT*/
+
+#about {
+  border: 1px solid white;
+  height: 800px; width: 100%;
+  color: #e4d9e5;
+  text-align: center;
+  background-color: black;
+  opacity: .9;
+}
+
+#about > h2 {
+  padding: 1em;
+}
+
+#my-face {
+  border: 1px solid #e4d9e5;
+  border-radius: 50px;
+  background-image: url('../media/ashleigh.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100px; width: 100px;
+  margin: 0 auto;
+}
+
+/*========================================*/
+/*CONTACT*/
+
+#contact {
+  border: 1px solid white;
+  height: 400px; width: 100%;
+  color: #e4d9e5;
+  background-color: #09222C;
+  opacity: .7;
+
+}
+
+#contact > h2 {
+  padding: 1em;
+  text-align: center;
+}
+
+#contact > ul {
+  margin-left: 0;
+  text-align: center;
+  width: 100%;
+}
+
+#contact > ul > li {
+  padding: 1em;
+  font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+/*========================================*/
+/*MEDIA QUERIES*/
+
 @media screen and (min-width: 480px) {
+    
     h1 {
-        font-size: 4em;
+      width: 70%;
+      text-align: left;
+      font-size: 4em;
+      padding-left: .5em;
     }
+
     ul {
       margin-right: 0;
+      margin-left: auto;
     }
+
     .cube-container {
       margin: 12% auto 40px;
     }
+
 }
