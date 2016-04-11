@@ -7,7 +7,7 @@ body {
   padding: 0;
   background-color: #000000;
   font-family: 'Source Sans Pro', sans-serif;
-  color: #e4d9e5;
+  color: #2BA9DA;
   background-image: url('https://images2.alphacoders.com/480/480530.png');
 }
 
@@ -15,7 +15,16 @@ header {
   width: 100%; height: 2em;
 }
 
+h1 {
+  display: inline-block;
+  padding-left: .5em;
+  font-size: 4em;
+  opacity: .2;
+}
 
+ul {
+  display: inline-block;
+}
 
 li {
   display: inline-block;
@@ -46,7 +55,7 @@ a:hover {
     width: 200px;
     height: 200px;
     position: relative;
-    margin: 0 auto 40px;
+    margin: 60% 10% 40px;
     text-align: center;
     -webkit-perspective: 1000px;
     -moz-perspective: 1000px;
@@ -72,7 +81,7 @@ a:hover {
     display: block;
     position: absolute; 
     height: 100%; width: 100%;
-    border: 2px solid red;
+    border: 2px solid #e4d9e5;
     color: #e4d9e5;
     text-align: center;
     background-color: #000000;
@@ -81,6 +90,7 @@ a:hover {
     background-position: center;
     opacity: .9;
 }
+
 
 #cube.panels-backface-invisible figure {
     -webkit-backface-visibility: hidden;
@@ -92,17 +102,6 @@ a:hover {
 h2 {
   font-size: 2em;
 }
-
-p {
-  font-size: 1em;
-}
-
-
-#about {
-  background-color: #000000;
-  opacity: .7;
-}
-
 
 #enigmatic {
   background-image: url('../media/enigmatic.png');
@@ -137,5 +136,12 @@ p {
   border: 1px solid red;
   height: 4em; width: 45%;
   margin: 0 auto;
-  margin-top: 20%;
+  margin-top: 10%;
+}
+
+
+@media screen and (min-width: 480px) {
+    .cube-container {
+      margin: 18% auto 40px;
+    }
 }
