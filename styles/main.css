@@ -103,7 +103,6 @@ a:hover {
     display: block;
     position: absolute; 
     height: 100%; width: 100%;
-    border: 2px solid #e4d9e5;
     color: #e4d9e5;
     text-align: center;
     background-color: #000000;
@@ -113,6 +112,14 @@ a:hover {
     opacity: .9;
 }
 
+
+figure {
+    border: 2px solid #e4d9e5;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .9;
+}
 
 #cube.panels-backface-invisible figure {
     -webkit-backface-visibility: hidden;
@@ -167,6 +174,18 @@ p {
   padding: 1.5em;
 }
 
+/*========================================*/
+/*OVERLAYS AFTER SEPARATION*/
+
+.disabled {
+  display: none;
+}
+
+.overlay {
+  opacity: .5;
+  background-color: #666666;
+  color: #2BA9DA;
+}
 
 /*========================================*/
 /*INFO BOX*/
