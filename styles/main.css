@@ -68,8 +68,7 @@ a:hover {
 
 
 .cube-container {
-    width: 200px;
-    height: 200px;
+    height: 200px; width: 200px;   
     position: relative;
     margin: 25% 10% 40px;
     text-align: center;
@@ -80,8 +79,7 @@ a:hover {
 }
 
 #cube {
-    width: 100%;
-    height: 100%;
+    height: 100%; width: 100%;
     position: absolute;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
@@ -175,7 +173,7 @@ p {
 /*ABOUT*/
 
 #about {
-  border: 1px solid white;
+  margin: 0;
   height: 800px; width: 100%;
   color: #e4d9e5;
   text-align: center;
@@ -189,25 +187,32 @@ p {
 
 #my-face {
   border: 1px solid #e4d9e5;
-  border-radius: 50px;
+  border-radius: 60px;
   background-image: url('../media/ashleigh.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100px; width: 100px;
+  height: 120px; width: 120px;
   margin: 0 auto;
+}
+
+#about > ul {
+  padding: 1em;
+}
+
+#about > ul > li {
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 /*========================================*/
 /*CONTACT*/
 
 #contact {
-  border: 1px solid white;
+  margin: 0;
   height: 400px; width: 100%;
   color: #e4d9e5;
   background-color: #09222C;
   opacity: .7;
-
 }
 
 #contact > h2 {
