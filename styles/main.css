@@ -161,9 +161,10 @@ h2 {
 
 p {
   border: 1px solid #e4d9e5;
-  height: 4em; width: 45%;
+  width: 45%;
   margin: 0 auto;
   margin-top: 10%;
+  padding: 1.5em;
 }
 
 
@@ -171,9 +172,10 @@ p {
 /*INFO BOX*/
 
 #info-box {
-  margin: 34% auto;
-  width: 60%;
-  border: 1px solid white;
+  margin-top: 81%;
+  margin-bottom: 15%;
+  width: 70%;
+/*  border: 1px solid white;*/
 }
 
 
@@ -182,7 +184,8 @@ p {
 
 #about {
   margin: 0;
-  height: 800px; width: 100%;
+  padding-bottom: 2em;
+  height: 975px; width: 100%;
   color: #e4d9e5;
   text-align: center;
   background-color: black;
@@ -195,17 +198,17 @@ p {
 
 h4 {
   font-size: 1.75em;
-  margin: 5% 10%;
+  margin: 10% 10%;
 }
 
 #my-face {
   border: 1px solid #e4d9e5;
-  border-radius: 60px;
+  border-radius: 70px;
   background-image: url('../media/ashleigh.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 120px; width: 120px;
+  height: 140px; width: 140px;
   margin: 0 auto;
 }
 
@@ -216,6 +219,10 @@ h4 {
 
 #about > ul > li {
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+span {
+  color: #2C7075;
 }
 
 /*========================================*/
@@ -230,11 +237,14 @@ h4 {
 }
 
 #contact > h2 {
-  padding: 1em;
+  margin: 0;
+  padding: 1.5em;
   text-align: center;
 }
 
 #contact > h4 {
+  font-size: 1.5em;
+  margin: 1.5em;
   text-align: center;
   border: 1px solid white;
   padding: 1em;
@@ -262,4 +272,15 @@ h4 {
       margin: 12% auto 40px;
     }
 
+    #info-box {
+      margin-top: 35%;
+    }
+
+    #about {
+      height: 820px; 
+    }
+
+    #contact > h4 {
+      font-size: 1.75em;
+    }
 }
