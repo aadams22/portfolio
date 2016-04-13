@@ -1,15 +1,6 @@
 window.onload = function() {
   var mousemove = null;
 
-  function pauseEvent(mousemove){
-    console.log('pauseEvent accessed');
-    if(mousemove.stopPropagation) mousemove.stopPropagation();
-    if(mousemove.preventDefault) mousemove.preventDefault();
-    mousemove.cancelBubble=true;
-    mousemove.returnValue=false;
-    return false;
-  }
-
 
 
   document.onmousemove = function (e) {
@@ -30,10 +21,14 @@ window.onload = function() {
 
 
 
-  document.querySelector('#cube').onclick = function(e){
-    console.log('clicked');
-    pauseEvent(mousemove);
-  };
+  // document.querySelector('#cube').onclick = function(e){
+  //   console.log('clicked', mousemove);
+  //   if(mousemove.stopPropagation) mousemove.stopPropagation();
+  //   if(mousemove.preventDefault) mousemove.preventDefault();
+  //   mousemove.cancelBubble=true;
+  //   mousemove.returnValue=false;
+  //   return false;
+  // };
 
 
 

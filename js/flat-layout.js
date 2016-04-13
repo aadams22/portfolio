@@ -25,7 +25,8 @@ $(function(){
 		 	"</figure>");
 
 		$("<ul class='left-right-buttons'>" + "<li id='l'>&#xE805</li>" + "<li id='r'>&#xE806</li>" + "</ul>").insertAfter('.cube-container');
-	
+		
+		$('<div id="return-to-cube">&#xE807</div>').insertBefore('h1');
 
 		//clicking the left button flips the figures to the right
 		var num = null;
@@ -77,9 +78,6 @@ $(function(){
 
 	//clicks the cube to trigger transition into the flipbook display
 	$('#cube').click(function(e){
-		$('html').off('mousemove');
-   // document.removeEventListener;
-
 		$('#cube').remove();
 		createNewFigures();
 	});
