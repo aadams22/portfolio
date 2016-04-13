@@ -7,10 +7,10 @@
   "ascent": 850,
   "glyphs": [
     {
-      "uid": "1145676a91138011729fa2909997af66",
-      "css": "linkedin-squared",
-      "code": 59394,
-      "src": "fontawesome"
+      "uid": "d30928620bda0d5eaa85d3b65bf19963",
+      "css": "right-circle",
+      "code": 59398,
+      "src": "websymbols"
     }
   ]
 }

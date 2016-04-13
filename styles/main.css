@@ -8,6 +8,18 @@
   src: url('../media/fonts/linkedin.ttf');
 }
 
+@font-face {
+  font-family: leftclick;
+  src: url('../media/fonts/left.ttf');
+}
+
+@font-face {
+  font-family: rightclick;
+  src: url('../media/fonts/right.ttf');
+}
+
+/*===================================
+/*HTML/BODY*/
 
 html  {
   height: 2000px;
@@ -66,10 +78,7 @@ a {
   color: white;
 }
 
-a:hover {
-  color: #09222C;
-}
-
+a:hover { opacity: .7; }
 
 /*===================================
 /*CUBE STRUCTURE*/
@@ -131,28 +140,13 @@ figure {
 /*========================================*/
 /*CUBE IMAGES AND INNER TEXT*/
 
-h2 {
-  font-size: 2em;
-}
+h2 { font-size: 2em; }
 
-#enigmatic { 
-  background-image: url('../media/enigmatic.png'); 
-}
-
-#medtrakr {
-  background-image: url('../media/medtrakr.png');
-}
-
-
-#connectfour {
-  background-image: url('../media/connectfour.png');
-
-}
-
-#space {
-  background-image: url('../media/planets.png');
-}
-
+#enigmatic      { background-image: url('../media/enigmatic.png'); }
+#medtrakr       { background-image: url('../media/medtrakr.png'); }
+#connectfour    { background-image: url('../media/connectfour.png'); }
+#space          { background-image: url('../media/planets.png'); }
+#oli-and-olive  { background-image: url('../media/oliandolive.png'); }
 
 /*========================================*/
 /*CUBE ROTATIONS*/
@@ -177,6 +171,7 @@ p {
 /*========================================*/
 /*OVERLAYS AFTER SEPARATION*/
 
+.disabled { display: none; }
 
 .flat-figure {
   position: absolute;
@@ -186,21 +181,21 @@ p {
   transform-style: preserve-3d;
 }
 
-.right {
-  transform: rotateY( 129deg ) translateZ( 100px );;
-}
+.right { transform: rotateY( 129deg ) translateZ( 100px ); }
+.left { transform: rotateY( -129deg ) translateZ( 100px ); }
 
-.left {
-    transform: rotateY( -129deg ) translateZ( 100px );;
-}
-
-.disabled {
-  display: none;
-}
-
-#left-right {
+.left-right {
   margin: 10%;
+  color: white;
+  font-size: 2em;
+  opacity: .5;
 }
+
+#r { font-family: rightclick; }
+#r:hover { opacity: .8; }
+
+#l { font-family: leftclick; }
+#l:hover { opacity: .8; }
 
 .overlay {
   height: 100%; width: 100%;
