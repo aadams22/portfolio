@@ -77,6 +77,8 @@ $(function(){
 
 	//clicks the cube to trigger transition into the flipbook display
 	$('#cube').click(function(e){
+		// $('html').off('mousemove');
+
 		$('#cube').remove();
 		createNewFigures();
 	});
