@@ -177,6 +177,13 @@ p {
 /*========================================*/
 /*OVERLAYS AFTER SEPARATION*/
 
+
+.flat-figure {
+  height: 50%; width: 50%;
+  display: inline-block;
+  margin: 0;
+}
+
 .disabled {
   display: none;
 }
