@@ -52,20 +52,24 @@ $(function(){
 			$leftItem.css('zIndex', 0);
 		});
 
-
-			$('.flat-figure').on('click', function(e){
-					var $childDiv = $(this).children(':first');
-					console.log($(this));
-					console.log('this is the child: ', $childDiv);
-					$childDiv.removeAttr('class', 'disabled');
-					$childDiv.attr('class', 'overlay');
-
-				});	
+		//when you click on the project, the disabled class is removed to reveal
+		//the information about the project
+		$('.flat-figure').on('click', function(e){
+				var $childDiv = $(this).children(':first');
+				$childDiv.removeAttr('class', 'disabled');
+				$childDiv.attr('class', 'overlay');
 
 			$('.overlay').on('click', function(e){
-				$('.overlay').addClass('disabled');
-				$('.overlay').removeClass('overlay');
+				$(this).addClass('disabled');
+				$(this).removeClass('overlay');
+				 //because the div is nested within a clickable div, we must stop propagation
+				 e.stopPropagation();
 			});
+
+			});	
+
+
+
 
 
 	};
