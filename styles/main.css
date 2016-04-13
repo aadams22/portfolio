@@ -184,11 +184,22 @@ p {
   display: inline-block;
   margin: 1em;
   transform-style: preserve-3d;
-  transform: rotateY(  129deg );
+}
+
+.right {
+  transform: rotateY( 129deg ) translateZ( 100px );;
+}
+
+.left {
+    transform: rotateY( -129deg ) translateZ( 100px );;
 }
 
 .disabled {
   display: none;
+}
+
+#left-right {
+  margin: 10%;
 }
 
 .overlay {
