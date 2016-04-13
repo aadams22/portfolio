@@ -72,6 +72,8 @@ $(function(){
 		$('#return-to-cube').on('click', function(e){
 			console.log('return to cube clicked');
 			$('figure').remove();
+			$('.left-right-buttons').remove();
+			$('#return-to-cube').remove();
 
 			$('.cube-container').append(
 			"<div id='cube'>" +
