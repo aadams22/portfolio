@@ -181,8 +181,8 @@ p {
   transform-style: preserve-3d;
 }
 
-.right { transform: rotateY( 139deg ) translateZ( 150px ); }
-.left { transform: rotateY( -139deg ) translateZ( 150px ); }
+.right { transform: rotateY( 139deg ) translateZ( -150px ); }
+.left { transform: rotateY( -139deg ) translateZ( -150px ); }
 
 .left-right-buttons {
   margin: 10%;
@@ -200,9 +200,8 @@ p {
 
 .overlay {
   height: 100%; width: 100%;
-  opacity: .5;
-  background-color: #666666;
-  color: #2BA9DA;
+/*  background-color: grey;*/
+  color: white;
   transform-style: preserve-3d;
 }
 

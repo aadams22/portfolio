@@ -52,10 +52,25 @@ $(function(){
 			$leftItem.css('zIndex', 0);
 		});
 
+			var $childDiv = null;
+			$('.flat-figure').hover(
+				function(e){
+					$childDiv = $(this).children(':first');
+					console.log($(this));
+					console.log('this is the child: ', $childDiv);
+					$childDiv.removeAttr('class', 'disabled');
+					$childDiv.attr('class', 'overlay');
+
+				}, function(e){
+					$childDiv.removeAttr('class', 'overlay');
+					$childDiv.attr('class', 'disabled');
+			});
+
+
 	};
 
 
-	//clicks the cube to trigger transition into the flat 2D display
+	//clicks the cube to trigger transition into the flipbook display
 	$('#cube').click(function(e){
 		$('#cube').remove();
 		createNewFigures();
@@ -63,17 +78,7 @@ $(function(){
 
 
 
-	$('.flat-figure').hover(function(e){
-		var $childDiv = $(this).children();
-		console.log($this);
-		console.log('THIS IS THE CHILD: ', $(this).children());
-		console.log('THIS IS THE VARIABLE: ', $childDiv);
-		// $childDiv.removeAttr('class', 'disabled');
-		$childDiv.attr('class', 'overlay');
 
-	}, function(e){
-		$childDiv.removeAttr('class', 'overlay');
-	});
 
 
 
