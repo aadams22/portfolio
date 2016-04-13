@@ -69,7 +69,24 @@ $(function(){
 
 			});	
 
+		$('#return-to-cube').on('click', function(e){
+			console.log('return to cube clicked');
+			$('figure').remove();
 
+			$('.cube-container').append(
+			"<div id='cube'>" +
+       " <figure class='front' id='projects'>" + "<h2>Projects</h2>" + "</figure>" +
+       " <figure class='back' id='oli-and-olive'></figure>" +
+       " <figure class='right' id='enigmatic'></figure>" +
+       " <figure class='left' id='medtrakr'></figure>" +
+       " <figure class='top' id='connectfour'></figure>" +
+       " <figure class='bottom' id='space'></figure>" +
+      "</div>"
+
+			);
+
+
+		});
 
 
 
