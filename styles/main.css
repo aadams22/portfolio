@@ -179,9 +179,12 @@ p {
 
 
 .flat-figure {
-  height: 50%; width: 50%;
+  position: absolute;
+  height: 100%; width: 100%;
   display: inline-block;
-  margin: 0;
+  margin: 1em;
+  transform-style: preserve-3d;
+  transform: rotateY(  129deg );
 }
 
 .disabled {
@@ -189,9 +192,11 @@ p {
 }
 
 .overlay {
+  height: 100%; width: 100%;
   opacity: .5;
   background-color: #666666;
   color: #2BA9DA;
+  transform-style: preserve-3d;
 }
 
 /*========================================*/
