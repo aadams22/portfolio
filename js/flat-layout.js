@@ -5,23 +5,23 @@ $(function(){
 		$('.cube-container').append(
 
      "<figure class='flat-figure right' id='medtrakr'>" +
-      	"<div class='disabled'>MedTrakr: a personal medication tracker using Node.js, Express, jQuery, Passport Authentication</div>" +
+      	"<div class='disabled'>" + "<h2>MedTrakr:</h2>" + " a personal medication tracker using Node.js, Express, jQuery, Passport Authentication</div>" +
       "</figure>" +
 
       "<figure class='flat-figure right' id='connectfour'>" +
-      	"<div class='disabled'>Connect Four: a static website using HTML5, CSS3, Javascript, jQuery</div>" +
+      	"<div class='disabled'>" + "<h2>Connect Four:</h2>" + " a static website using HTML5, CSS3, Javascript, jQuery</div>" +
       "</figure>" +
 
       "<figure class='flat-figure right' id='oli-and-olive'>" +
-      	"<div class='disabled'>Oli & Olive: a personalized landing page using Ruby, Rails, Devise, and the DarkSkies API</div>" +
+      	"<div class='disabled'>" + "<h2>Oli & Olive:</h2> "+ " a personalized landing page using Ruby, Rails, Devise, and the DarkSkies API</div>" +
       "</figure>" +
 
       "<figure class='flat-figure right' id='space'>" +
-      	"<div class='disabled'>Space: a single page educational 3D animated model of the Solar System using HTML5, CSS3, Angular, Node.js, Express, MongoDB, Passport Authentication</div>" +
+      	"<div class='disabled'>" + "<h2>Space:</h2>" + " a single page educational 3D animated model of the Solar System using HTML5, CSS3, Angular, Node.js, Express, MongoDB, Passport Authentication</div>" +
       "</figure>" +
 
       "<figure class='flat-figure left' id='enigmatic'>" + 
-		 		"<div class='disabled'>Enigmatic: an AES 256 encrypted private messaging web application using Node.js, Express, Socket.io, MongoDB, Crypto, Passport Authentication, and Facebook Oauth</div>" +
+		 		"<div class='disabled'>" + "<h2>Enigmatic:</h2>" + " an AES 256 encrypted private messaging web application using Node.js, Express, Socket.io, MongoDB, Crypto, Passport Authentication, and Facebook Oauth</div>" +
 		 	"</figure>");
 
 		$("<ul class='left-right-buttons'>" + "<li id='l'>&#xE805</li>" + "<li id='r'>&#xE806</li>" + "</ul>").insertAfter('.cube-container');
@@ -52,18 +52,19 @@ $(function(){
 			$leftItem.css('zIndex', 0);
 		});
 
-			var $childDiv = null;
-			$('.flat-figure').hover(
-				function(e){
-					$childDiv = $(this).children(':first');
+
+			$('.flat-figure').on('click', function(e){
+					var $childDiv = $(this).children(':first');
 					console.log($(this));
 					console.log('this is the child: ', $childDiv);
 					$childDiv.removeAttr('class', 'disabled');
 					$childDiv.attr('class', 'overlay');
 
-				}, function(e){
-					$childDiv.removeAttr('class', 'overlay');
-					$childDiv.attr('class', 'disabled');
+				});	
+
+			$('.overlay').on('click', function(e){
+				$('.overlay').addClass('disabled');
+				$('.overlay').removeClass('overlay');
 			});
 
 
