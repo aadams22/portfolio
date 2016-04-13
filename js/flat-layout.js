@@ -1,6 +1,6 @@
 $(function(){
 
-	//appends the new div overlays
+	//appends the new figures and their overlays
 	function createNewFigures() {
 		$('.cube-container').append(
 
@@ -24,51 +24,56 @@ $(function(){
 		 		"<div class='disabled'>Enigmatic: an AES 256 encrypted private messaging web application using Node.js, Express, Socket.io, MongoDB, Crypto, Passport Authentication, and Facebook Oauth</div>" +
 		 	"</figure>");
 
-		$("<ul class='left-right'>" + "<li id='l'>&#xE805</li>" + "<li id='r'>&#xE806</li>" + "</ul>").insertAfter('.cube-container');
+		$("<ul class='left-right-buttons'>" + "<li id='l'>&#xE805</li>" + "<li id='r'>&#xE806</li>" + "</ul>").insertAfter('.cube-container');
 	
-	$('#l').on('click', function(e){
 
-		var $right = $('.right').last();
-		$right.removeClass('right');
-		$right.addClass('left'); 
+		//clicking the left button flips the figures to the right
+		var num = null;
+		$('#l').on('click', function(e){	
+			//z-index counter
+			num += 1;
+			//grabs the visible figure on the right
+			var $rightItem = $('.right').last();
+			//removes the right class name and adds the left classname
+			$rightItem.removeClass('right');
+			$rightItem.addClass('left'); 
+			//sets the zIndex of the clicked figure so that other figures can be stacked on top
+			$rightItem.css('zIndex', num);
+		});
 
-
-	});
-
-	$('#r').on('click', function(e){
-		var $left = $('.left').last();
-		$left.removeClass('left');
-		$left.addClass('right'); 
-
-
-
-	});
+		//clicking the right button flips the figures to the left
+		$('#r').on('click', function(e){
+			//grabs the visible figure on the left
+			var $leftItem = $('.left').last();
+			//removes the left class name and adds the right classname
+			$leftItem.removeClass('left');
+			$leftItem.addClass('right'); 
+			//clears the zIndex so other figures can be stacked on top
+			$leftItem.css('zIndex', 0);
+		});
 
 	};
 
 
 	//clicks the cube to trigger transition into the flat 2D display
 	$('#cube').click(function(e){
-		console.log("CUBE HAS BEEN CLICKED!");
 		$('#cube').remove();
-
 		createNewFigures();
-
-	}); //<--cube click
-
+	});
 
 
-	// $('.flat-figure').hover(function(e){
-	// 	var $childDiv = $(this).children();
-	// 	console.log($this);
-	// 	console.log('THIS IS THE CHILD: ', $(this).children());
-	// 	console.log('THIS IS THE VARIABLE: ', $childDiv);
-	// 	// $childDiv.removeAttr('class', 'disabled');
-	// 	$childDiv.attr('class', 'overlay');
 
-	// }, function(e){
-	// 	$childDiv.removeAttr('class', 'overlay');
-	// });
+	$('.flat-figure').hover(function(e){
+		var $childDiv = $(this).children();
+		console.log($this);
+		console.log('THIS IS THE CHILD: ', $(this).children());
+		console.log('THIS IS THE VARIABLE: ', $childDiv);
+		// $childDiv.removeAttr('class', 'disabled');
+		$childDiv.attr('class', 'overlay');
+
+	}, function(e){
+		$childDiv.removeAttr('class', 'overlay');
+	});
 
 
 
