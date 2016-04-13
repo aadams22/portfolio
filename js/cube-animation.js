@@ -2,7 +2,7 @@
 
 //possibly use the jquery Draggable to change this to a draggable feature instead of a onmousemove
 
-if ( document.querySelector('#cube') ) {
+
 
 document.onmousemove = function (e) {
     var x = e.clientX - innerWidth/2,
@@ -20,4 +20,4 @@ document.onmousemove = function (e) {
 };
 
 
-};
+
