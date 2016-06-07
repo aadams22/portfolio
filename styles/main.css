@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: linkedin;
-  src: url('../media/fonts/linkedin.ttf');
+  src: url('../media/fonts/web-symbols/linkedin.ttf');
 }
 
 @font-face {
@@ -60,7 +60,7 @@ h1 {
 }
 
 ul {
-  margin: 0 20%;
+  margin: 0 7%;
 }
 
 li {
