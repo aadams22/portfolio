@@ -22,13 +22,15 @@
   font-family: x;
   src: url('../media/fonts/x.ttf');
 }
+@font-face {
+  font-family: email;
+  src: url('../media/fonts/font-awesome/email.ttf');
+}
 
 /*===================================
 /*HTML/BODY*/
 
-html  {
-  height: 2000px;
-}
+html { height: 2000px; }
 
 body {
   height: 100%;
@@ -36,7 +38,7 @@ body {
   padding: 0;
   background-color: #000000;
   font-family: 'Source Sans Pro', sans-serif;
-  color: #2BA9DA;
+  color: #e4d9e5;
   background-image: url('https://images2.alphacoders.com/480/480530.png');
 }
 
@@ -44,19 +46,21 @@ body {
 /*===================================
 /*HEADER/NAV*/
 
+header { background-color: #09222C; }
 
 h1 {
   width: 100%;
   text-align: center;
   display: inline-block;
   font-size: 3em;
-  opacity: .2;
-  margin-bottom: 1%;
+  margin: 0 auto;
+  font-size: 2em;
+  color: white;
 }
 
 ul {
   text-align: center;
-  margin-left: 10%;
+  margin: 0 auto;
   display: inline-block;
 }
 
@@ -67,14 +71,7 @@ li {
   padding: 0 1em;
 }
 
-li:nth-child(3) {
-  font-family: github;  
-}
-
-li:last-child {
-  border: none;
-  font-family: linkedin;
-}
+li:last-child { border: none; }
 
 /*===================================
 /*LINKS*/
@@ -187,6 +184,7 @@ p {
   padding: 1em;
   transform-style: preserve-3d;
 }
+
 
 .right { transform: rotateY( 0deg ) translateZ( -120px ); }
 .left { transform: rotateY( -90deg ) translateZ( -120px ); }
@@ -308,14 +306,20 @@ span {
   text-align: center;
 }
 
-#contact > h4 {
-  font-size: 1.5em;
-  margin: 1.5em;
-  text-align: center;
-  border: 1px solid white;
-  padding: 1em;
+#contact > ul {
+  margin: 0 auto;
+  font-size: 2em;
 }
 
+#contact > ul > li:nth-child(1) { font-family: github; }
+#contact > ul > li:nth-child(2) { font-family: email; }
+#contact > ul > li:nth-child(3){ font-family: linkedin; }
+
+
+footer {
+  padding: .5em;
+  text-align: center;
+}
 
 /*========================================*/
 /*MEDIA QUERIES*/
@@ -325,13 +329,15 @@ span {
     h1 {
       width: 70%;
       text-align: left;
-      font-size: 4em;
-      padding-left: .5em;
+      font-size: 2em;
+      padding: 0 .5em;
     }
 
-    ul {
+    header > ul {
+/*      margin-top: 0;
+      margin-bottom: 0;
       margin-right: 0;
-      margin-left: auto;
+      margin-left: auto;*/
     }
 
     .cube-container {
@@ -346,11 +352,11 @@ span {
       height: 820px; 
     }
 
-    #contact > h4 {
-      font-size: 1.75em;
-    }
-
     .left-right-buttons {
       margin: 8% auto;
+    }
+
+    #contact > ul {
+      font-size: 4em;
     }
 }
