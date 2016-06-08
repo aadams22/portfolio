@@ -1,6 +1,6 @@
 $(function(){
 
-
+var $overlay = null;
 var	counter = 0;
 var	projectArray = [
 			{
@@ -45,21 +45,34 @@ var	projectArray = [
 
 
 		function createCarousel(){
-			console.log('carousel created.', projectArray[counter].name);
+			console.log('carousel created.');
 
-				$("#projects").append(
-					"<img id='0' src='" + projectArray[0].img + "'></img>" +
-					"<img id='1' src='" + projectArray[1].img + "'></img>" +
-					"<img id='2' src='" + projectArray[2].img + "'></img>" +
-					"<img id='3' src='" + projectArray[3].img + "'></img>" +
-					"<img id='4' src='" + projectArray[4].img + "'></img>" 
-				);
+				for (var i = 0; i < projectArray.length; i++) {
+					$("#projects").append(
+						"<div>" +
+							"<img id='" + i + "' src='" + projectArray[i].img + "'></img>" +
+							"<div class='overlay'>" +
+								"<h3>" + projectArray[i].name + "</h3>" +
+								"<ul>" +
+									"<li>" + "<a href='" + projectArray[i].github + "'>&#xE800</a>" + "</li>" +
+									"<li>" + "<a href='" + projectArray[i].url + "'>&#xE800</a>" + "</li>" +							
+								"</ul>" +
+							"</div>" +
+						"</div>");
+				};
+
 
 			$("img").hover(
 			function(){
-				console.log($(this).attr('id'));
-			}, function(){
+				console.log($(this));
+				$overlay = $(this).next();
+				$overlay.removeClass('disabled');
+				$overlay.addClass('overlay');
 
+
+			}, function(){
+				$overlay.removeClass('overlay');
+				$overlay.addClass('disabled');			
 			});
 
 		}; 

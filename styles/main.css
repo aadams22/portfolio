@@ -26,7 +26,10 @@
   font-family: email;
   src: url('../media/fonts/font-awesome/email.ttf');
 }
-
+@font-face {
+  font-family: link;
+  src: url('../media/fonts/entypo/link.ttf');
+}
 /*===================================
 /*HTML/BODY*/
 
@@ -170,12 +173,15 @@ p {
   margin: 0 auto;
   margin-top: 10%;
   padding: 1.5em;
+  -webkit-box-shadow: 0px 0px 65px -7px #10505C;
+  -moz-box-shadow: 0px 0px 65px -7px #10505C;
+  box-shadow: 0px 0px 65px -7px #10505C;
 }
 
 /*========================================*/
 /*OVERLAYS AFTER SEPARATION*/
 
-.disabled { display: none; }
+/*.disabled { display: none; }*/
 
 /*.flat-figure {
   position: absolute;
@@ -243,12 +249,38 @@ p {
   padding: 0;
 }
 
+.list-container {
+  border: 1px solid green;
+}
+h3 { text-align: center; }
+
 img {
+  position: relative;
+  z-index: 1;
   width: 40%;
   margin: 1em;
   display: inline-block;
+  -webkit-box-shadow: 0px 0px 65px -7px #10505C;
+  -moz-box-shadow: 0px 0px 65px -7px #10505C;
+  box-shadow: 0px 0px 65px -7px #10505C;
+
 }
 
+.disabled { display: none; }
+
+.overlay {
+  position: absolute;
+  height: 42%; width: 40%;
+  background-color: silver;
+  opacity: .9;
+  color: #081F1E;
+  z-index: 3;
+  border: 2px solid #808080;
+}
+
+
+.overlay > ul > li:nth-child(1) { font-family: github; }
+.overlay > ul > li:nth-child(2) { font-family: link; }
 
 /*========================================*/
 /*ABOUT*/
@@ -261,6 +293,9 @@ img {
   text-align: center;
   background-color: black;
   opacity: .9;
+  -webkit-box-shadow: 0px 0px 65px -7px #10505C;
+  -moz-box-shadow: 0px 0px 65px -7px #10505C;
+  box-shadow: 0px 0px 65px -7px #10505C;
 }
 
 #about > h2 {
@@ -288,13 +323,9 @@ h4 {
   padding: 1em;
 }
 
-#about > ul > li {
-  font-family: 'Source Sans Pro', sans-serif;
-}
+#about > ul > li { font-family: 'Source Sans Pro', sans-serif; }
 
-span {
-  color: #2C7075;
-}
+span { color: #2C7075;}
 
 /*========================================*/
 /*CONTACT*/
@@ -357,13 +388,10 @@ footer {
       height: 820px; 
     }
 
-    .left-right-buttons {
-      margin: 8% auto;
-    }
-
     #contact > ul {
       margin-left: 22%;
       margin-right: 22%;
       font-size: 4em;
     }
+
 }
