@@ -232,13 +232,11 @@ p {
 #return-to-cube:hover { opacity: .8; }
 
 /*========================================*/
-/*INFO BOX*/
+/*PROJECTS*/
 
-#info-box {
-  margin-top: 81%;
-  margin-bottom: 15%;
-  width: 70%;
-/*  border: 1px solid white;*/
+#projects {
+  height: 700px;
+  border: 1px solid green;
 }
 
 

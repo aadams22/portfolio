@@ -3,10 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Ashleigh Adams</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./styles/main.css" media="screen" title="no title" charset="utf-8">
     </script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="./js/carousel.js"></script>
     <script type="text/javascript" src="./js/cube-animation.js"></script>
     <script type="text/javascript" src="./js/flat-layout.js"></script>
   </head>
@@ -15,26 +17,26 @@
     <header>
       <h1>Ashleigh Adams</h1>
       <ul>
-        <li>Projects</li>
+        <li id="project-link"><a href="#projects">Projects</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </header>
+    <section id="projects">
+      <div class="cube-container">
+        
+        <div id="cube">
+            <figure class="front" id="title"><h2>Projects</h2></figure>
+            <figure class="back" id="oli-and-olive"></figure>
+            <figure class="right" id="enigmatic"></figure>
+            <figure class="left" id="medtrakr"></figure>
+            <figure class="top" id="connectfour"></figure>
+            <figure class="bottom" id="space"></figure>
+        </div>
 
-    <div class="cube-container">
-      
-      <div id="cube">
-          <figure class="front" id="projects"><h2>Projects</h2></figure>
-          <figure class="back" id="oli-and-olive"></figure>
-          <figure class="right" id="enigmatic"></figure>
-          <figure class="left" id="medtrakr"></figure>
-          <figure class="top" id="connectfour"></figure>
-          <figure class="bottom" id="space"></figure>
       </div>
 
-    </div>
-
-    <section id="info-box"></section>
+    </section>
 
     <section id="about">
       <h2>About</h2>
