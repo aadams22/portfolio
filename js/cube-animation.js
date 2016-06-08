@@ -21,14 +21,14 @@ window.onload = function() {
 
 
 
-  // document.querySelector('#cube').onclick = function(e){
-  //   console.log('clicked', mousemove);
-  //   if(mousemove.stopPropagation) mousemove.stopPropagation();
-  //   if(mousemove.preventDefault) mousemove.preventDefault();
-  //   mousemove.cancelBubble=true;
-  //   mousemove.returnValue=false;
-  //   return false;
-  // };
+  document.querySelector('#projects').onclick = function(e){
+    console.log('clicked', mousemove);
+    if(mousemove.stopPropagation) mousemove.stopPropagation();
+    if(mousemove.preventDefault) mousemove.preventDefault();
+    mousemove.cancelBubble=true;
+    mousemove.returnValue=false;
+    return false;
+  };
 
 
 

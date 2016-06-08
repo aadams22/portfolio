@@ -47,7 +47,9 @@ body {
 /*===================================
 /*HEADER/NAV*/
 
-header { background-color: #09222C; }
+header { 
+  background-color: #09222C; 
+}
 
 h1 {
   width: 100%;
@@ -175,7 +177,7 @@ p {
 
 .disabled { display: none; }
 
-.flat-figure {
+/*.flat-figure {
   position: absolute;
   height: 100%; width: 100%;
   display: inline-block;
@@ -188,10 +190,11 @@ p {
 .right { transform: rotateY( 0deg ) translateZ( -120px ); }
 .left { transform: rotateY( -90deg ) translateZ( -120px ); }
 
-.left-right-buttons {
+#r #l {
   color: white;
   font-size: 2em;
   opacity: .5;
+  display: inline-block;
   width: 100%;
   margin: 8% -14%;
 }
@@ -229,14 +232,21 @@ p {
   font-family: x;
 }
 
-#return-to-cube:hover { opacity: .8; }
+#return-to-cube:hover { opacity: .8; }*/
 
 /*========================================*/
 /*PROJECTS*/
 
 #projects {
   height: 700px;
-  border: 1px solid green;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 40%;
+  margin: 1em;
+  display: inline-block;
 }
 
 
